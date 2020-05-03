@@ -13,8 +13,11 @@ RUN echo "xdebug.idekey=PHPSTORM" >> /usr/local/etc/php/php.ini
 RUN echo "xdebug.remote_autostart=1" >> /usr/local/etc/php/php.ini
 RUN echo "xdebug.remote_connect_back=0" >> /usr/local/etc/php/php.ini
 RUN echo "xdebug.cli_color=1" >> /usr/local/etc/php/php.ini
+
+RUN echo "" >> /usr/local/etc/php/php.ini
+
 RUN echo "xdebug.profiler_enable=0" >> /usr/local/etc/php/php.ini
 RUN echo "xdebug.profiler_enable_trigger=1" >> /usr/local/etc/php/php.ini
-RUN echo "xdebug.profiler_output_dir=/home/www-data/pfm-corporate/profiler" >> /usr/local/etc/php/php.ini
+RUN echo "xdebug.profiler_output_dir=/var/www/html/profiler" >> /usr/local/etc/php/php.ini
 
 RUN echo "max_execution_time = 300" >> /usr/local/etc/php/php.ini
