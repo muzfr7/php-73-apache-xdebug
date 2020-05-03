@@ -2,9 +2,16 @@ version: '3.2'
 
 services:
   
-  server:
+  wwww:
     build: .
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - ./app:/var/www/html
+
+  webgrind:
+    image: creativeprojects/webgrind
+    ports:
+      - '8090:80'
+    volumes:
+      - "./app/profiling:/tmp/xdebug"
